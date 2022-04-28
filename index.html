@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria</title>
+  <style>
+    .grd {
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+}
+
+.grd img {
+  width: 800px;
+  position: absolute;
+}
+
+.peq {
+  margin: 0 auto;
+  height: 90px;
+  text-align: center;
+}
+
+.peq img {
+  height: 100%;
+  cursor: pointer;
+}
+  </style>
+  <script src="jQuery/jquery-3.6.0.min.js"></script>
+  <script>
+    $('body').ready(function () {
+      $('.grd img').hide(0);
+      $('#foto1').show(0);
+
+      $('.peq img').click(function (x) {
+        alt = $(this).attr('alt');
+        $('.grd img').hide(0);
+        $(alt).show(0);
+      })
+    })
+
+  </script>
+</head>
+<body>
+  <div class="grd">
+    <img id="foto1" src="https://i.redd.it/a9pl1pqkahh51.png" alt="">
+    <img id="foto2" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/5d474b42374337.57ca842494946.jpg" alt="">
+    <img id="foto3" src="https://pbs.twimg.com/media/FBXessoWEAURfr_?format=png&name=large" alt="">
+    <img id="foto4" src="https://c4.wallpaperflare.com/wallpaper/665/68/940/anime-room-interior-dark-wallpaper-preview.jpg" alt="">
+    <img id="foto5" src="https://www.designyourway.net/blog/wp-content/uploads/2019/02/aesthetic-wallpaper-9-1600x900.jpg" alt="">
+  </div>
+  <div class="peq">
+      <img src="https://i.redd.it/a9pl1pqkahh51.png" alt="#foto1">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/5d474b42374337.57ca842494946.jpg" alt="#foto2">
+      <img src="https://pbs.twimg.com/media/FBXessoWEAURfr_?format=png&name=large" alt="#foto3">
+      <img src="https://c4.wallpaperflare.com/wallpaper/665/68/940/anime-room-interior-dark-wallpaper-preview.jpg" alt="#foto4">
+      <img src="https://www.designyourway.net/blog/wp-content/uploads/2019/02/aesthetic-wallpaper-9-1600x900.jpg" alt="#foto5">
+  </div>
+</body>
+</html>
